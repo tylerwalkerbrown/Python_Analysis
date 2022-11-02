@@ -17,18 +17,6 @@ os.chdir("Desktop/mojo")
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    FileNotFoundError                         Traceback (most recent call last)
-
-    Input In [15], in <cell line: 1>()
-    ----> 1 os.chdir("Desktop/mojo")
-
-
-    FileNotFoundError: [Errno 2] No such file or directory: 'Desktop/mojo'
-
-
-
 ```python
 #reading in the csv file that contains our keys to access twitter
 config = pd.read_csv("api.csv")
@@ -84,57 +72,7 @@ tweets = tweepy.Cursor(twitterApi.user_timeline,
 df = pd.DataFrame(data = [tweet.text for tweet in tweets], columns = ["Tweet"])
 ```
 
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-    Unexpected parameter: contribubtori_details
-    Unexpected parameter: include_entities
-
+   
 
 
 ```python
@@ -192,7 +130,7 @@ df["Score"] = df["Polarity"].apply(getTextAnalysis)
 
 ```python
 positive = df[df["Score"]=='Positive']
-print(str(len(positive)/len(df))[2:4],"% of CNNs tweets are postive.")
+print(str(len(positive)/len(df))[2:4],"% of  Fox's tweets are postive.")
 pos = (len(positive)/len(df))*100
 ```
 
@@ -202,7 +140,7 @@ pos = (len(positive)/len(df))*100
 
 ```python
 negative = df[df["Score"]=='Negative']
-print(str(len(negative)/len(df))[2:4],"% of CNNs tweets are negative.")
+print(str(len(negative)/len(df))[2:4],"% of  Fox's  tweets are negative.")
 neg = (len(negative)/len(df)) * 100
 ```
 
@@ -212,7 +150,7 @@ neg = (len(negative)/len(df)) * 100
 
 ```python
 neutral = df[df["Score"]=='Neutral']
-print(str(len(neutral)/len(df))[2:4],"% of CNNs tweets are negative.")
+print(str(len(neutral)/len(df))[2:4],"% of Fox's tweets are negative.")
 neut = (len(neutral)/len(df))* 100
 ```
 
