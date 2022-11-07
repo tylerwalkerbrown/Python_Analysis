@@ -33,17 +33,6 @@ twitterAccessScret = config['Access token']
 
 
 ```python
-#Different keys/secrets to access the twitter feed account we choose
-apikeysecret = str("dC2JTskodYf5p3Ghhi9gEU8K2kt0NqXLJkdEs9XNZOjPu4Zx93")
-accesstoken = str("1494526926681214978-vIr38ox0q6Uuv98BvxitQugYNeUDBk")
-bear = str("AAAAAAAAAAAAAAAAAAAAAAZyZQEAAAAA0kXaweFHXRtc7%2B8LfTMLd0DGYmE%3Dk7lhowvONJsa09nbFnot5iVbsJOpppRirkQlo061rAFNYMKM3H")
-Accesstokensecret = str("tAyTDRMj9dicobLt8c273RkBV71B2k3YQ84PueYvEFORQ")
-apikey = 'yXv6zqdSt2BLFiMtSLcKgebAo'
-
-```
-
-
-```python
 #Getting proper authentication using the keys above
 auth = tweepy.OAuthHandler(apikey,apikeysecret)
 auth.set_access_token(accesstoken,Accesstokensecret)
